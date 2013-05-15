@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Gray码</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<h1 id="toc_1">Gray码/格雷码</h1>
+<h2 id="toc_1.1">定义</h2>
+<p>
+格雷码是一个数列集合，其相邻两个数之间只有一个位元变化
+n阶反射码归纳定义如下：
+</p>
+<ol>
+<li>
+1阶反射码是(0, 1)
+
+<li>
+设n &gt; 1, 且n - 1阶反射码已经构建好，首先以n - 1阶反射码给出的顺序列出0, 1的n - 1元组, 把0添加到每个n - 1元组的开头，然后反向列出n - 1阶反射码的n - 1元组， 并把1添加到n - 1元组的开头
+
+</ol>
+<h2 id="toc_1.2">生成已知反射码的前驱或者后继</h2>
+<h3 id="toc_1.2.1">生成后继</h3>
+<p>
+以n元组a<sub><small>n-1</small></sub>a<sub><small>n-2</small></sub>...a<sub><small>0</small></sub> = 00...0开始。当n元组a<sub><small>n-1</small></sub>a<sub><small>n-2</small></sub>...a<sub><small>0</small></sub>  != 10...0时，做：
+</p>
+<ol>
+<li>
+计算f(a<sub><small>n-1</small></sub>a<sub><small>n-2</small></sub>...a<sub><small>0</small></sub>) =  a<sub><small>n-1</small></sub> + a<sub><small>n-2</small></sub> + ... + a<sub><small>0</small></sub>
+
+<li>
+如果f(a<sub><small>n-1</small></sub>a<sub><small>n-2</small></sub>...a<sub><small>0</small></sub>)是偶数，则改变a<sub><small>0</small></sub>(异或 ^)
+
+<li>
+否则确定这样的j, 使得a<sub><small>j</small></sub> = 1， 满足j &gt; i的所有i，a<sub><small>i</small></sub> = 0;然后改变a<sub><small>j+1</small></sub> (即最后一个1的前一个数字改变)
+
+</ol>
+
+<p>
+反向计算前驱即可
+#如果f(a<sub><small>n-1</small></sub>a<sub><small>n-2</small></sub>...a<sub><small>0</small></sub>)是奇数,改变a<sub><small>0</small></sub>
+<a href="#否则最后一个1的前一个数字改变.html">#否则最后一个1的前一个数字改变</a>
+</p>
+
+</body>
+</html>
