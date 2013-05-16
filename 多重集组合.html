@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>多重集组合</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+    <div class="content">
+    
+<h1 id="toc_1">多重集组合</h1>
+<h2 id="toc_1.1">每个元素数量均为无限的组合</h2>
+<p>
+每种物体都可以提供无限多个的\(k\)种不同类型的元素\(r-\)组合的个数等于
+</p>
+<blockquote>
+\(\Big(^{r + k - 1}_r\Big)\)
+</blockquote>
+<p>
+即方程\(x_1 + x_2 + ... + x_k = r\)的非负整数解个数
+</p>
+<h2 id="toc_1.2">有部分物体数量有下界，但均无上界</h2>
+<p>
+将r减去所有下界之和即得到第一种的形式，照样解即可
+</p>
+<h2 id="toc_1.3">物体数量既有上界又有下界的处理</h2>
+<blockquote>
+设T是一个多重集，并设其中物体\(x\)具有大于\(r\)的重数，那么\(T\)的\(r-\)组合数等于用\(r\)替代\(x\)的重数的\(r-\)组合个数
+</blockquote>
+
+<p>
+所以我们可以利用<a href="容斥原理.html">容斥原理</a>，将上界限制转化为下界限制，再按第二种解决办法解决
+例
+</p>
+<blockquote>
+若有多重集\(T = \{x \cdot a, y \cdot b, z \cdot c\}\),求\(r-\)组合<br>
+设\(P_1\)为T \(r-\)组合具有多于\(x\)个a的性质，\(P_2\)为多于y个b的性质，\(P_3\)为多余z个c的性质<br>
+设\(A_i\)为具有性质\(P_i\)的r-组合,此时我们即确定\(\bar{A_1} \cap \bar{A_2} \cap \bar{A_3}\)的大小<br>
+根据容斥原理<br>
+\(|\bar{A_1} \cap \bar{A_2} \cap \bar{A_3}| = |S| - (|A_1| + |A_2| + |A_3|) + \)<br>
+\( (|A_1 \cap A_2|) + |A_2 \cap A_3| + |A_1 \cap A_3|) - |A_1 \cap A_2 \cap \cap A_3|\)<br>
+集合\(A_1\)则是a至少出现x次的T的r-组合个数，\(A_2\), \(A_3\)同理<br>
+</blockquote>
+
+<h2 id="toc_1.4">利用 <a href="生成函数.html">生成函数</a> 进行处理</h2>
+<p>
+幂级数的生成函数表示多重集组合的个数
+</p>
+<blockquote>
+利用生成函数可以得到更一般性的结论<br>
+根据限定条件写出第i个变量的\(h_i(x)\)<br>
+\(g(x) = \prod{h_i(x)}\)<br>
+\(g(x)\)的级数展开第r项结果即为所求结果<br>
+</blockquote>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>二部图匹配</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+    <div class="content">
+    
+<h1 id="toc_1">二部图匹配</h1>
+<h2 id="toc_1.1">描述二部图</h2>
+<ol>
+<li>
+顶点的集合
+
+<li>
+将该顶点集分成两个部分的一个划分
+
+<li>
+连接一部分的一个顶点与另一部分的一个顶点的边的集合
+
+</ol>
+
+<h2 id="toc_1.2">匹配</h2>
+<p>
+另$G = (X, \Delta , Y)为一个二分图, G的匹配定义为
+</p>
+<blockquote>
+边集\(\Delta\)的子集M具有性质:M中没有两条便有公共顶点
+</blockquote>
+
+<p>
+若G是任意二分图，定义
+</p>
+<blockquote>
+\(\rho (G) = max\{|M| : M是匹配\}\)
+</blockquote>
+<p>
+为G的最大匹配M的边数
+</p>
+<h3 id="toc_1.2.1">增广路径/交错路径</h3>
+<p>
+令M为二部图\(G = (X, \Delta, Y)\)中的一个匹配，令\(\bar{M}\)为M的补集。另u，v为顶点，其中u，v一个是左顶点一个是又顶点。连接u和v的路径\(\gamma\)如果满足下列性质，则是对于M的交错路径，简称M-交错路径
+</p>
+<ol>
+<li>
+\(\gamma\)的奇数边不属于M(属于\(\bar{M}\))
+
+<li>
+\(\gamma\)的偶数边属于M
+
+<li>
+u,v都不与匹配M的边关联
+
+</ol>
+<p>
+所以\(\gamma\)的长度为2k + 1
+</p>
+
+<h3 id="toc_1.2.2">最大匹配</h3>
+<p>
+当M不存在M-交错路径时，M为G的最大匹配
+否则总是能够通过异或运算(将属于M的边归属\(\bra{M}\),将属于\(\bar{M}\)的边归属M)，将M-交错路径转化为一个更大匹配
+匹配算法
+</p>
+<blockquote>
+令$G = (X, \Delta, Y)为一个二部图,若M为一个空匹配<br>
+</blockquote>
+<ol>
+<li>
+设X的所有顶点为未标记的
+
+<li>
+当存在X存在未标记的顶点，取出该顶点x，设所有Y的顶点未标记
+
+</ol>
+
+    </div>
+</body>
+</html>
