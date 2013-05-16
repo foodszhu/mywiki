@@ -1,0 +1,42 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>拉丁方</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div class="content">
+    
+<h1 id="toc_1">拉丁方</h1>
+<h2 id="toc_1.1">定义</h2>
+<p>
+令S为n个不同元素的集合，基于S的n阶拉丁方是一个n行n列的阵列，阵列上的每个元素均为S的元素，使得S的每一个均在每行出现一次且每列出现一次
+</p>
+<h2 id="toc_1.2">构造拉丁方</h2>
+<p>
+令n为一整数，r为Z<sub><small>n</small></sub>中的非零整数，使r和n的<a href="最大公约数.html">GCD</a>为1,令A为n行n列阵列，其i行j列上的元素是
+</p>
+<blockquote>
+a<sub><small>ij</small></sub> = r X i + j(mod n), (i, j = 0, 1, ..., n-1)
+</blockquote>
+<p>
+则A为基于Z<sub><small>n</small></sub>的n阶 <strong>拉丁方</strong>
+</p>
+<blockquote>
+用Z<sub><small>n</small></sub>中有乘法逆元的整数r所构造的n阶拉丁方记作L<sup><small>r</small></sup><sub><small>n</small></sub>
+</blockquote>
+<h2 id="toc_1.3">正交</h2>
+<p>
+令A和B是两个基于Z<sub><small>n</small></sub>中的整数的拉丁方。在并置阵列A X B中,如果Z<sub><small>n</small></sub>中整数的每一序偶(i, j)恰好出现一次，则称A和B是 <strong>正交</strong> 的
+</p>
+<h3 id="toc_1.3.1">MOLS</h3>
+<p>
+令A<sub><small>1</small></sub>, A<sub><small>2</small></sub>, ..., A<sub><small>k</small></sub>均为n阶拉丁方，如果他们中的每一对A<sub><small>i</small></sub>, A<sub><small>j</small></sub>都是正交的，我们把互相正交的拉丁方记作 <strong>MOLS</strong>
+</p>
+<blockquote>
+若n是素数则L<sup><small>1</small></sup><sub><small>n</small></sub>, L<sup><small>2</small></sup><sub><small>n</small></sub>, ..., L<sup><small>n-1</small></sup><sub><small>n</small></sub>是一个n阶 <strong>MOLS</strong>
+</blockquote>
+
+    </div>
+</body>
+</html>
