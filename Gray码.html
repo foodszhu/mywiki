@@ -51,6 +51,25 @@ n阶反射码归纳定义如下：
 
 </ol>
 
+<h2 id="toc_1.3">已知n元组格雷码，求序数</h2>
+<p>
+若n元组a<sub><small>n-1</small></sub>...a<sub><small>1</small></sub>a<sub><small>0</small></sub>位于格雷码序表的k处，其中k确定如下：
+</p>
+<blockquote>
+对i = 0, 1, ..., n - 1令<br>
+\(b_i = 0，若a_{n-1} + ... + a_i是偶数\)<br>
+\(b_i = 1, 若a_{n-1} + ... + a_i是奇数\)<br>
+</blockquote>
+<p>
+则
+</p>
+<blockquote>
+k = b<sub><small>n-1</small></sub> X 2<sup><small>n-1</small></sup> + .... b<sub><small>1</small></sub> X 2 + b<sub><small>0</small></sub> X 2<sup><small>0</small></sup>
+</blockquote>
+<p>
+于是，a<sub><small>n-1</small></sub>...a<sub><small>1</small></sub>a<sub><small>0</small></sub>在二进制格雷码表中的位置与b<sub><small>n-1</small></sub>...b<sub><small>1</small></sub>b<sub><small>0</small></sub>在二进制字典序中的位置相同
+</p>
+
     </div>
 </body>
 </html>
