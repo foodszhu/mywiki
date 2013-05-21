@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>域</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+    <div class="content">
+    
+<h1 id="toc_1">域</h1>
+<h2 id="toc_1.1">Z</h2>
+<p>
+设n是满足n\(\geq\)2的正整数，令
+</p>
+<blockquote>
+\(Z_n = \{0, 1, ..., n - 1\}\)
+</blockquote>
+<p>
+是小雨n的非负整数集
+</p>
+<h2 id="toc_1.2">构造域</h2>
+<p>
+对于每一个素数p和整数k\(\geq\)2,都可以从域Z<sub><small>p</small></sub>，存在一个系数在Z<sub><small>p</small></sub>中且没有非频繁分解的k次多项式。于是可以构造具有p<sup><small>k</small></sup>个元素的域
+</p>
+
+<p>
+由于是k次多项式，所以我们必定可以将i<sup><small>k</small></sup>，用其他项表示出来,这样我们获得了一个k-1次多项式，分别将Z<sub><small>p</small></sub>里的数字带入带多项式中即可得到有p<sup><small>k</small></sup>项元素的域
+(由于k次多项式其实有k+1个项，所以有此结论,同时注意负数转换,最后需要求一下-i是多少,同时域跟题目所给的多项式关系不大。。主要是用来求-i的)
+</p>
+
+<p>
+计算算式结果时只需要算出域中的值即可(别忘了取模)
+</p>
+
+    </div>
+</body>
+</html>
