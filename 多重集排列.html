@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>多重集排列</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+    <div class="content">
+    
+<h1 id="toc_1">多重集排列</h1>
+<h2 id="toc_1.1">已知固定重数</h2>
+<p>
+令S为一个多重集有k个不同类型的元素，各元素重数分别为n<sub><small>1</small></sub>, n<sub><small>2</small></sub>, ..., b<sub><small>k</small></sub>.设S的大小为n = n<sub><small>1</small></sub> + n<sub><small>2</small></sub> + ... + n<sub><small>k</small></sub>则S的排列数等于
+</p>
+<blockquote>
+\(\frac{n!}{n_1!n_2! ...n_k!}\)
+</blockquote>
+<h2 id="toc_1.2">利用 <a href="生成函数.html">生成函数</a></h2>
+<p>
+同 <a href="多重集组合.html">多重集组合</a>.
+不过生成函数为指数生成函数
+</p>
+\[
+g^{(e)}(x) = \sum_{n=0}^\infty{\frac{(ax)^n}{n!}} = e^{ax}
+\]
+
+    </div>
+</body>
+</html>

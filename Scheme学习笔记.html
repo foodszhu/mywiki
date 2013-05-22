@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+    <title>Scheme学习笔记</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+    <div class="content">
+    
+<h1 id="toc_1">Scheme学习笔记</h1>
+<p>
+自此之后应该学会记笔记这样的东西了。。发觉自己学得东西略多。。但真正记下来的挺少。最后还是要查手册或者上网搜。这样不好.
+</p>
+
+<p>
+不过这东西又是自己的。。所以也可以不用写太详细。。自己明白就好。。同时也是个人理解。。说不定出错。。出错的部分一定要画出撒。。而不是简单的删掉
+</p>
+
+
+<h2 id="toc_1.1">初识Scheme</h2>
+<p>
+Scheme是Lisp方言的一种。。以简洁著称。。。但实际的应用我却了解的不多。。似乎没有Common Lisp用的广。。。
+</p>
+
+<p>
+在linux下我还是选择了用<a href="guile.html">guile</a>来作为Scheme的<a href="解释器.html">解释器</a>.期待着有一天拿guile给GNU写扩展吧
+</p>
+
+<p>
+以括号为界定符,括号内第一个原子来表示这一组数据干什么。。比较重要的就是
+</p>
+<ul>
+<li>
+quote  (quote x) 返回x， 可用`(x)简写
+
+<li>
+car (car x y) 返回x 返回列表的第一个元素
+
+<li>
+cdr (cdr x y) 返回y 返回列表的除第一个元素组成的表
+
+</ul>
+
+<p>
+写个比较简单的GCD吧
+</p>
+<pre>
+(define (GCD a b)
+    (if (= b 0)
+        a
+        (GCD b (remainder a b))
+    )
+)
+</pre>
+
+    </div>
+</body>
+</html>
